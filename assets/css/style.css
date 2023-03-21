@@ -2,3 +2,43 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid grey;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  background-image: url("../images/background_flowers.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  height: 25vh;
+}
+
+nav {
+  display: flex;
+  border: 1px solid grey;
+}
+
+.nav-content {
+  display: flex;
+  gap: 5%;
+  list-style: none;
+  border: 1px solid grey;
+  font-size: 16px;
+}
+
+.nav-item {
+  display: flex;
+  flex: 0 0 auto;
+  text-decoration: none;
+}
