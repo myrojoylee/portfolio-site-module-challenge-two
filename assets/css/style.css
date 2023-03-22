@@ -2,63 +2,94 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: none;
+  font-size: 16px;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #ede9fe, #e9d5ff, #d8b4fe);
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  border: 1px solid grey;
+  align-items: center;
+  height: 15vh;
+  background-color: #581c87;
 }
 
-.banner {
-  display: flex;
-  justify-content: space-between;
-  background-image: url("../images/background_flowers.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+/*==================NAV BAR STYLES AND ANIMATION===================*/
 
-  height: 25vh;
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #ede9fe;
+}
+
+a {
+  color: #581c87;
+  /* background-image: linear-gradient(90deg, #7e22ce 10%, #d8b4fe 50%),
+    linear-gradient(90deg, #d8b4fe 10%, #ede9fe 50%); */
+  background-position: 0 100%;
+  background-size: 0 2px, 100% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 1s;
+}
+
+a.gradient:hover {
+  background-image: linear-gradient(90deg, #7e22ce 10%, #d8b4fe 50%),
+    linear-gradient(90deg, #d8b4fe 10%, #ede9fe 50%);
+  background-size: 100% 2px, 100% 2px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.name {
+  background-color: #ede9fe;
+  font-size: 1.5em;
+  padding: 0.5em;
+  border-radius: 0 1em 1em 0;
 }
 
 nav {
   display: flex;
-
-  border: 1px solid grey;
 }
 
 .nav-content {
   display: flex;
-
-  gap: 5%;
-  list-style: none;
-  border: 1px solid grey;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 .nav-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 0 0 auto;
-  text-decoration: none;
+  margin: 5px;
+  list-style: none;
+  color: #ede9fe;
+  /* border-bottom: 2px solid #ede9fe; */
+}
+
+.banner {
+  background-image: url("../images/background_flowers.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 25vh;
 }
 
 .about-me,
 .work {
   display: flex;
+  margin: 1rem 0;
 }
 
 .about-me__header,
 .work__header,
 .social-media__header {
-  margin: 5%;
+  padding: 5%;
   width: 25vw;
   text-align: right;
+  border-right: 3px solid black;
 }
 
 footer {
