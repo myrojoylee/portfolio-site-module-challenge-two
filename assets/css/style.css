@@ -15,7 +15,7 @@ body {
 /*==================BANNER STYLE===================*/
 
 header {
-  background-image: url("../images/background_flowers.jpg");
+  background: linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,0.2)), url("../images/background_flowers.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -26,7 +26,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 20vh;
   background-color: #581c87e6;
 }
 
@@ -38,7 +38,11 @@ header {
 .profile__pic {
   align-self: center;
   width: 20vh;
+  height: 20vh;
   border-radius: 50%;
+  object-fit: cover;
+  margin-left: 2rem;
+  filter: drop-shadow(0 0 1rem #000000);
 }
 
 /*==================NAV BAR STYLES AND ANIMATION===================*/
@@ -83,12 +87,14 @@ nav {
   color: #ede9fe;
 }
 
+.name {
+  margin-top: 1rem;
+}
 .name a {
   background-color: #ede9fee6;
   font-size: 2em;
   font-weight: 600;
   padding: 0.25em 0.5em;
-  border-radius: 0 1em 1em 0;
   color: black;
   transition: 1s;
 }
@@ -184,4 +190,22 @@ nav {
 
 footer {
   display: flex;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 575px){
+  .top {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .name a {
+    border-radius: 1em;
+  }
+
+}
+
+@media (min-width: 575px) {
+  .name a {
+    border-radius: 0 1em 1em 0;
+  }
 }
