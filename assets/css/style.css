@@ -1,21 +1,27 @@
+/*===============UNIVERSAL RESET====================*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   border: none;
-  font-size: 16px;
 }
 
+/*===============GENERAL BODY STYLING====================*/
 body {
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
   background-image: linear-gradient(to right, #ede9fe, #e9d5ff, #d8b4fe);
+  font-size: 16px;
 }
-
 /*==================BANNER STYLE===================*/
 
 header {
-  background-image: url("../images/background_flowers.jpg");
+  background-image: linear-gradient(
+      to right,
+      rgba(237, 233, 254, 0.6),
+      rgba(237, 233, 254, 0)
+    ),
+    url("../images/background_flowers.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -37,8 +43,11 @@ header {
 
 .profile__pic {
   align-self: center;
-  width: 20vh;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 3px 5.9px 5.9px hsl(0deg 0% 0% / 0.41);
 }
 
 /*==================NAV BAR STYLES AND ANIMATION===================*/
@@ -101,19 +110,27 @@ nav {
 
 /*==================MAIN CONTENT STYLES====================*/
 
-.about-me,
+/* .credentials {
+  display: flex;
+} */
+
+.about-me {
+  display: flex;
+  width: 100%;
+
+  /* margin: 0 auto; */
+}
+
 .work {
   display: flex;
-  margin: 0.5em 0;
+  width: 100%;
 }
 
 .about-me__header,
 .work__header,
 .social-media__header {
   display: flex;
-
   flex: 0 0 200px;
-  /* width: 25vw; */
   padding: 3%;
   text-align: right;
   font-size: 1.75em;
@@ -122,13 +139,10 @@ nav {
 }
 
 .about-me__detail,
-.work__detail,
-.social-media__detail {
-  display: flex;
+.social-media__detail,
+.work__detail {
   margin: 0.5em;
-  padding: 0.5em;
-  gap: 0.5em;
-  width: 75vw;
+  padding: 0 0.5em;
   border-left: 3px solid black;
 }
 
@@ -137,48 +151,42 @@ nav {
   flex-direction: column;
 }
 
-.calculator img,
-.something-else img {
-  position: relative;
-  width: 30vw;
-  margin: 0 1em;
-}
-/* 
-.calculator .calculator__overlay {
-  background: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  height: inherit;
-  width: inherit;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  -moz-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s;
+.work__detail {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 1rem;
 }
 
-.calculator:hover .calculator__overlay {
-  opacity: 1;
+.work__detail-top {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  border: 3px solid #7e22ce;
 }
 
-.calculator__details {
-  position: absolute;
-  text-align: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  width: inherit;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-} */
+div.work__detail-top img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.work__detail-bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 1em;
+  width: 100%;
+  height: 20%;
+  padding: 0.5em;
+}
+
+div.work__detail-bottom img {
+  width: 50%;
+  object-fit: cover;
+  border: 3px solid #7e22ce;
+  margin: 1rem 0;
+}
 
 /*==================FOOTER STYLES====================*/
 
