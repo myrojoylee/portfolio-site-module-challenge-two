@@ -4,28 +4,33 @@
   padding: 0;
   box-sizing: border-box;
   border: none;
+  list-style: none;
 }
 
 /*===============GENERAL BODY STYLING====================*/
 body {
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
+  max-width: 1400px;
   background-image: linear-gradient(to right, #ede9fe, #e9d5ff, #d8b4fe);
   font-size: 16px;
+  margin: auto;
 }
-/*==================BANNER STYLE===================*/
+/*==================HEADER AND BANNER STYLE===================*/
 
 header {
   background-image: linear-gradient(
-      to right,
-      rgba(237, 233, 254, 0.6),
-      rgba(237, 233, 254, 0)
+      to left,
+      rgba(237, 233, 254, 0.2),
+      rgba(0, 0, 0, 0.7)
     ),
     url("../images/background_flowers.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 40vh;
+  height: 40vw;
+  min-height: 350px;
+  max-height: 500px;
 }
 
 .top {
@@ -45,9 +50,10 @@ header {
   align-self: center;
   width: 200px;
   height: 200px;
+  margin-left: 1em;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 3px 5.9px 5.9px hsl(0deg 0% 0% / 0.41);
+  box-shadow: 0px 20px 30px hsla(0, 100%, 99%, 0.6);
 }
 
 /*==================NAV BAR STYLES AND ANIMATION===================*/
@@ -76,19 +82,19 @@ a:visited {
   cursor: pointer;
 }
 
-nav {
+.nav-bar {
   display: flex;
   margin: 1em;
 }
 
 .nav-content {
   display: flex;
-  font-size: 1em;
+  font-size: 1.25em;
+  font-weight: 600;
 }
 
 .nav-item {
   margin: 0.5em;
-  list-style: none;
   color: #ede9fe;
 }
 
@@ -110,21 +116,24 @@ nav {
 
 /*==================MAIN CONTENT STYLES====================*/
 
-/* .credentials {
+/* ~~~~~~~~ Section Styling ~~~~~~~~ */
+.credentials {
   display: flex;
-} */
+  flex-direction: column;
+  gap: 2em;
+}
 
 .about-me {
   display: flex;
   width: 100%;
-
-  /* margin: 0 auto; */
 }
 
 .work {
   display: flex;
   width: 100%;
 }
+
+/* ~~~~~~~ Section Detail Styling ~~~~~~ */
 
 .about-me__header,
 .work__header,
@@ -135,14 +144,12 @@ nav {
   text-align: right;
   font-size: 1.75em;
   justify-content: end;
-  align-self: center;
 }
 
 .about-me__detail,
 .social-media__detail,
 .work__detail {
-  margin: 0.5em;
-  padding: 0 0.5em;
+  padding: 1em 2em;
   border-left: 3px solid black;
 }
 
@@ -151,45 +158,65 @@ nav {
   flex-direction: column;
 }
 
+/* ~~~~~~ Work Section Image Styling ~~~~~~ */
+
 .work__detail {
   display: flex;
   flex-direction: column;
-
   width: 100%;
-  padding: 1rem;
+  max-height: 70vw;
 }
 
 .work__detail-top {
   display: flex;
+  max-height: 70%;
   width: 100%;
-  height: 30%;
-  border: 3px solid #7e22ce;
+  padding: 0 0 1em 0;
 }
 
-div.work__detail-top img {
+.work__detail-top img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
+  border: 3px solid #581c87e6;
 }
 
 .work__detail-bottom {
   display: flex;
-  justify-content: center;
+  max-height: 30%;
   width: 100%;
+  height: 100%;
   gap: 1em;
-  width: 100%;
-  height: 20%;
-  padding: 0.5em;
 }
 
-div.work__detail-bottom img {
-  width: 50%;
+.work__detail-bottom img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: 3px solid #7e22ce;
-  margin: 1rem 0;
+  border: 3px solid #581c87e6;
 }
 
 /*==================FOOTER STYLES====================*/
 
 footer {
   display: flex;
+  margin-top: 2em;
+}
+
+.social-media__detail {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.social-media__detail ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.social-media__detail ul li {
+  color: #581c87e6;
+  font-weight: 600;
 }
