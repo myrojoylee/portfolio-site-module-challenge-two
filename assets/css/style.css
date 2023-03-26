@@ -11,11 +11,9 @@
 body {
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
-
   background-image: linear-gradient(to right, #ede9fe, #e9d5ff, #d8b4fe);
   background-repeat: no-repeat;
   background-size: cover;
-
   border: 1px solid black;
 }
 
@@ -123,7 +121,7 @@ a:visited {
   padding: 0.25em 0.5em;
   border-radius: 0 1em 1em 0;
   color: black;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .name a:hover {
@@ -149,7 +147,7 @@ a:visited {
   display: block;
   height: 2px;
   position: relative;
-  width: 30px;
+  width: 40px;
 }
 
 .hamburger-line::before,
@@ -165,11 +163,11 @@ a:visited {
 }
 
 .hamburger-line::before {
-  top: 5px;
+  top: 7px;
 }
 
 .hamburger-line::after {
-  top: -5px;
+  top: -7px;
 }
 
 /*==================MAIN CONTENT STYLES====================*/
@@ -219,7 +217,7 @@ a:visited {
   gap: 1em;
 }
 
-/* ~~~~~~ Work Section Image Styling ~~~~~~ */
+/* ~~~~~~ Work Section Image and Label Styling ~~~~~~ */
 
 .work__detail {
   display: flex;
@@ -365,6 +363,21 @@ nav p {
 /*==================RESPONSIVE STYLES====================*/
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* ~~~~~~~~ Selected Styles - TABLET ~~~~~~~~ */
+
+  .name a {
+    font-size: 2em;
+  }
+  .banner {
+    justify-content: center;
+  }
+
+  .profile__pic {
+    margin-left: 0;
+    width: 150px;
+    height: 150px;
+  }
+
   .about-me__detail {
     font-size: 1.25em;
   }
@@ -379,6 +392,22 @@ nav p {
 }
 
 @media screen and (max-width: 767px) {
+  /* ~~~~~~~~ Header Styles - MOBILE ~~~~~~~~ */
+
+  .name a {
+    font-size: 2em;
+  }
+
+  .banner {
+    justify-content: center;
+  }
+
+  .profile__pic {
+    margin-left: 0;
+    width: 150px;
+    height: 150px;
+  }
+
   .nav-bar {
     margin: 0;
     margin-top: 100px;
@@ -396,11 +425,12 @@ nav p {
   }
 
   .nav-content {
-    width: fit-content;
+    width: 140px;
     height: 120px;
+    padding-right: 2em;
     flex-direction: column;
     font-size: 0.5em;
-    align-items: flex-end;
+    align-items: end;
     justify-content: center;
     background-color: #581c87e6;
   }
@@ -410,7 +440,7 @@ nav p {
     margin: 0.5em;
   }
 
-  /* ~~~~~~~~ Hamburger Menu Toggle/Animation ~~~~~~~~ */
+  /* ~~~~~~~~ Hamburger Menu Toggle/Animation - MOBILE ~~~~~~~~ */
 
   .hamburger {
     display: block;
@@ -434,18 +464,7 @@ nav p {
     top: 0;
   }
 
-  .name a {
-    font-size: 2em;
-  }
-  .banner {
-    justify-content: center;
-  }
-
-  .profile__pic {
-    margin-left: 0;
-    width: 150px;
-    height: 150px;
-  }
+  /* ~~~~~~~~ Main Content Styles - MOBILE ~~~~~~~~ */
 
   .credentials {
     gap: 1em;
@@ -507,6 +526,10 @@ nav p {
     width: 100%;
     gap: 1em;
     overflow: hidden;
+  }
+
+  .work__detail-top-label {
+    margin-top: 35%;
   }
 
   .work__detail-top-label,
