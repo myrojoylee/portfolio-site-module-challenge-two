@@ -57,7 +57,7 @@ header {
   align-self: center;
   width: 200px;
   height: 200px;
-  margin-left: 4em;
+  margin-left: 6em;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0px 20px 30px hsla(0, 100%, 99%, 0.6);
@@ -324,16 +324,16 @@ nav p {
 }
 
 @media screen and (max-width: 767px) {
-  /* body {
-    min-width: 377px;
-  } */
-
   .nav-content {
     font-size: 0.5em;
   }
 
   .banner {
     justify-content: center;
+  }
+
+  .profile__pic {
+    margin-left: 0;
   }
 
   .credentials {
