@@ -11,10 +11,17 @@
 body {
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
+
   max-width: 1400px;
   background-image: linear-gradient(to right, #ede9fe, #e9d5ff, #d8b4fe);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 16px;
   margin: auto;
+}
+
+.image-links {
+  display: contents;
 }
 /*==================HEADER AND BANNER STYLE===================*/
 
@@ -100,7 +107,7 @@ a:visited {
 
 .name a {
   background-color: #ede9fee6;
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 600;
   padding: 0.25em 0.5em;
   border-radius: 0 1em 1em 0;
@@ -140,22 +147,24 @@ a:visited {
 .social-media__header {
   display: flex;
   flex: 0 0 200px;
-  padding: 3%;
+  padding: 0.5em;
   text-align: right;
-  font-size: 1.75em;
+  font-size: 2.25em;
   justify-content: end;
 }
 
 .about-me__detail,
 .social-media__detail,
 .work__detail {
-  padding: 1em 2em;
+  padding: 1em;
   border-left: 3px solid black;
 }
 
 .about-me__detail {
   display: flex;
   flex-direction: column;
+  font-size: 1.5em;
+  gap: 1em;
 }
 
 /* ~~~~~~ Work Section Image Styling ~~~~~~ */
@@ -186,8 +195,9 @@ a:visited {
 
 .work__detail-top img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
+  overflow: hidden;
   border: 3px solid #581c87;
 }
 
@@ -250,17 +260,119 @@ footer {
 .social-media__detail {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
-.social-media__detail ul {
+.social-media__detail div {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   align-items: end;
+  border-bottom: 3px solid #581c87;
+  margin: 1em;
 }
 
-.social-media__detail ul li {
-  color: #581c87e6;
+.social-media__detail div p {
+  color: #581c87;
   font-weight: 600;
+  cursor: pointer;
 }
+
+.phone,
+.email {
+  display: flex;
+  width: 100%;
+}
+
+nav p {
+  letter-spacing: 0.25em;
+}
+
+.phone-hidden {
+  position: relative;
+}
+
+.phone-reveal {
+  display: none;
+  position: absolute;
+}
+
+.email-hidden {
+  position: relative;
+}
+
+.email-reveal {
+  display: none;
+  position: absolute;
+}
+
+.phone-hidden:hover {
+  display: none;
+}
+
+/* .phone-reveal:hover {
+  display: contents;
+} */
+
+@media screen and (max-width: 767px) {
+  .credentials {
+    gap: 1em;
+  }
+
+  .about-me,
+  .work,
+  .social-media {
+    flex-direction: column;
+  }
+
+  .about-me__header,
+  .work__header,
+  .social-media__header {
+    justify-content: center;
+    align-content: center;
+    flex: 0 0 0;
+  }
+
+  .about-me__detail,
+  .social-media__detail,
+  .work__detail {
+    padding: 0;
+    border: none;
+    border-top: 3px solid black;
+    background: #d8b4fe;
+  }
+
+  .about-me__detail {
+    padding: 1em;
+    gap: 1em;
+    font-size: 1.15em;
+  }
+
+  .work__detail {
+    width: 100%;
+    max-height: 100vw;
+    gap: 1em;
+    padding: 1em;
+  }
+
+  .work__detail-top {
+    width: 100%;
+    max-height: 70%;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .work__detail-top img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .work__detail-bottom {
+    max-height: 20%;
+    width: 100%;
+    gap: 1em;
+    overflow: hidden;
+  }
+} ;
