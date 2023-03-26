@@ -94,16 +94,24 @@ a:visited {
 
 .nav-bar {
   display: flex;
+  top: 0;
   margin: 1em;
+  max-height: none;
+  height: 100%;
+  /* overflow: hidden; */
 }
 
 .nav-content {
   display: flex;
+  align-items: center;
   font-size: 1.25em;
   font-weight: 600;
+  height: 100%;
 }
 
 .nav-item {
+  display: flex;
+
   margin: 0.5em;
   color: #ede9fe;
 }
@@ -122,6 +130,46 @@ a:visited {
   background-color: #d8b4fe;
   transition: 1s;
   cursor: pointer;
+}
+
+/* ~~~~~~~~ Hamburger Menu Styling ~~~~~~~~ */
+
+.side-menu {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 40px 20px;
+}
+
+.hamburger-line {
+  background: #ede9fe;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 30px;
+}
+
+.hamburger-line::before,
+.hamburger-line::after {
+  background: #ede9fe;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+  justify-content: center;
+}
+
+.hamburger-line::before {
+  top: 5px;
+}
+
+.hamburger-line::after {
+  top: -5px;
 }
 
 /*==================MAIN CONTENT STYLES====================*/
@@ -331,8 +379,59 @@ nav p {
 }
 
 @media screen and (max-width: 767px) {
+  .nav-bar {
+    margin: 0;
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    justify-content: end;
+    align-content: end;
+    position: fixed;
+  }
+
+  .nav-bar {
+    max-height: 0%;
+    transition: max-height 0s ease-out;
+  }
+
   .nav-content {
+    width: fit-content;
+    height: 120px;
+    flex-direction: column;
     font-size: 0.5em;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: #581c87e6;
+  }
+
+  .nav-item {
+    font-size: 2em;
+    margin: 0.5em;
+  }
+
+  /* ~~~~~~~~ Hamburger Menu Toggle/Animation ~~~~~~~~ */
+
+  .hamburger {
+    display: block;
+  }
+
+  .side-menu:checked ~ .nav-bar {
+    max-height: 100%;
+  }
+
+  .side-menu:checked ~ .hamburger .hamburger-line {
+    background: transparent;
+  }
+
+  .side-menu:checked ~ .hamburger .hamburger-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .side-menu:checked ~ .hamburger .hamburger-line::after {
+    transform: rotate(45deg);
+    top: 0;
   }
 
   .name a {
@@ -427,4 +526,4 @@ nav p {
   .social-media__detail div p {
     font-size: 0.5em;
   }
-} ;
+}
