@@ -46,10 +46,13 @@ header {
   align-items: center;
   height: 100px;
   background-color: #581c87e6;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 .banner {
-  height: 70%;
+  height: 100%;
   display: flex;
 }
 
@@ -57,7 +60,7 @@ header {
   align-self: center;
   width: 200px;
   height: 200px;
-  margin-left: 6em;
+  margin: 6em 0 0 5.5em;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0px 20px 30px hsla(0, 100%, 99%, 0.6);
@@ -107,7 +110,7 @@ a:visited {
 
 .name a {
   background-color: #ede9fee6;
-  font-size: 3em;
+  font-size: 2.85em;
   font-weight: 600;
   padding: 0.25em 0.5em;
   border-radius: 0 1em 1em 0;
@@ -314,6 +317,10 @@ nav p {
 /*==================RESPONSIVE STYLES====================*/
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .about-me__detail {
+    font-size: 1.25em;
+  }
+
   .social-media__detail div {
     margin: 0.5em;
   }
@@ -328,12 +335,17 @@ nav p {
     font-size: 0.5em;
   }
 
+  .name a {
+    font-size: 2em;
+  }
   .banner {
     justify-content: center;
   }
 
   .profile__pic {
     margin-left: 0;
+    width: 150px;
+    height: 150px;
   }
 
   .credentials {
@@ -352,6 +364,7 @@ nav p {
     justify-content: center;
     align-content: center;
     flex: 0 0 0;
+    font-size: 1.5em;
   }
 
   .about-me__detail,
@@ -366,7 +379,7 @@ nav p {
   .about-me__detail {
     padding: 2em;
     gap: 1em;
-    font-size: 1.15em;
+    font-size: 1em;
   }
 
   .work__detail {
@@ -395,6 +408,20 @@ nav p {
     width: 100%;
     gap: 1em;
     overflow: hidden;
+  }
+
+  .work__detail-top-label,
+  .work__detail-bottom-label-left,
+  .work__detail-bottom-label-right {
+    padding: 0.5em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  .work__detail p {
+    font-size: 0.75em;
   }
 
   .social-media__detail div p {
