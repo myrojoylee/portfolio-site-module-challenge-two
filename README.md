@@ -6,7 +6,7 @@ The purpose of the assignment was to create the first draft of a working portfol
 
 ## Usage
 
-<img src="https://github.com/myrojoylee/horiseon-code-refactor/blob/main/assets/images/screenshot_2.jpg" width = "500" />
+![Desktop View:]<img src="https://github.com/myrojoylee/professional-portfolio-mj-lee/blob/main/assets/images/portfolio.gif" width = "500" />
 
 [Click here for repo](https://github.com/myrojoylee/professional-portfolio-mj-lee)
 
