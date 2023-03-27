@@ -196,7 +196,7 @@ a:visited {
 .work__header,
 .social-media__header {
   display: flex;
-  flex: 0 0 350px;
+  flex: 0 0 300px;
   padding: 0.5em;
   text-align: right;
   font-size: 2.25em;
@@ -313,51 +313,20 @@ footer {
   justify-content: space-evenly;
 }
 
-.social-media__detail div {
+.social-media__detail ul {
   display: flex;
-  width: 100%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: end;
-  border-bottom: 3px solid #581c87;
-  margin: 1em;
+  gap: 2em;
 }
 
-.social-media__detail div p {
+.social-media__detail-text,
+.social-media__detail-text a {
   color: #581c87;
+  font-size: 1em;
   font-weight: 600;
   cursor: pointer;
-}
-
-.phone,
-.email {
-  display: flex;
-  width: 100%;
-}
-
-nav p {
-  letter-spacing: 0.25em;
-}
-
-.phone-hidden {
-  position: relative;
-}
-
-.phone-reveal {
-  display: none;
-  position: absolute;
-}
-
-.email-hidden {
-  position: relative;
-}
-
-.email-reveal {
-  display: none;
-  position: absolute;
-}
-
-.phone-hidden:hover {
-  display: none;
+  border-bottom: 3px solid #581c87;
 }
 
 /*==================RESPONSIVE STYLES====================*/
@@ -382,12 +351,35 @@ nav p {
     font-size: 1.25em;
   }
 
-  .social-media__detail div {
-    margin: 0.5em;
+  .social-media__detail ul {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+      "email github"
+      "phone linkedin";
+    justify-content: center;
+    gap: 2em;
   }
 
-  .social-media__detail div p {
-    font-size: 0.75em;
+  .email {
+    grid-area: email;
+  }
+
+  .github {
+    grid-area: github;
+  }
+
+  .phone {
+    grid-area: phone;
+  }
+
+  .linkedin {
+    grid-area: linkedin;
+  }
+
+  .social-media__detail-text,
+  .social-media__detail-text a {
+    font-size: 1em;
   }
 }
 
@@ -545,8 +537,34 @@ nav p {
   .work__detail p {
     font-size: 0.75em;
   }
+  .social-media__detail ul {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+      "email github"
+      "phone linkedin";
+    justify-content: center;
+    margin: 1em;
+  }
 
-  .social-media__detail div p {
-    font-size: 0.5em;
+  .social-media__detail ul li,
+  .social-mdia__detail a {
+    font-size: 0.9em;
+  }
+
+  .email {
+    grid-area: email;
+  }
+
+  .github {
+    grid-area: github;
+  }
+
+  .phone {
+    grid-area: phone;
+  }
+
+  .linkedin {
+    grid-area: linkedin;
   }
 }
