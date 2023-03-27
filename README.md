@@ -10,6 +10,10 @@ DESKTOP VIEW:
 
 <img src="https://github.com/myrojoylee/professional-portfolio-mj-lee/blob/main/assets/images/portfolio.gif" width = "500" />
 
+MOBILE VIEW:
+
+<img src="https://github.com/myrojoylee/professional-portfolio-mj-lee/blob/main/assets/images/portfolio_mobile.gif" width = "250" />
+
 [Click here for repo](https://github.com/myrojoylee/professional-portfolio-mj-lee)
 
 [Click here for live site](https://myrojoylee.github.io/professional-portfolio-mj-lee/)
