@@ -4,20 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <!--- Stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Portfolio - MJ Lee</title>
   </head>
   <body>
+    <!------------------------------ HEADER ------------------------------>
+    <!-------------------------------------------------------------------->
     <header class="header">
-      <div class="top">
+      <section class="top">
         <div class="name">
-          <a href="https://github.com/myrojoylee">Myro Joy Lee</a>
+          <a href="https://github.com/myrojoylee"><h1>Myro Joy Lee</h1></a>
         </div>
 
         <!-- Hamburger Menu and Icon -->
@@ -40,7 +45,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+      </section>
 
       <!--- Profile Picture -->
       <section class="banner">
@@ -51,11 +56,12 @@
         />
       </section>
     </header>
-
+    <!----------------------------- MAIN CONTENT ------------------------->
+    <!-------------------------------------------------------------------->
     <main>
       <section class="credentials">
         <!--------------- ABOUT ME SECTION ---------------->
-        <div id="about-me" class="about-me">
+        <article id="about-me" class="about-me">
           <h2 class="about-me__header">About Me</h2>
           <div class="about-me__detail">
             <p>
@@ -70,13 +76,13 @@
               the family's social media accounts.
             </p>
           </div>
-        </div>
+        </article>
 
-        <!--------------- WORK SECTION ---------------->
-        <div id="work" class="work">
+        <!------------------ WORK SECTION ------------------>
+        <article id="work" class="work">
           <h2 class="work__header">Work</h2>
           <div class="work__detail">
-            <!------------- top image and label -------------->
+            <!---------- top image and label ---------->
             <div class="work__detail-top">
               <a
                 class="image-links"
@@ -89,26 +95,23 @@
                 />
 
                 <div class="work__detail-top-label">
-                  <h3 class="label-title">Project 1</h3>
+                  <h3 class="label-title">Calculator</h3>
                   <p class="label-tech-stack">HTML, CSS, JS</p>
                 </div>
               </a>
             </div>
 
-            <!------------ bottom images and label -------------->
+            <!--------- bottom images and labels ------->
             <div class="work__detail-bottom">
               <div class="bottom-image-left">
                 <a
                   class="image-links"
-                  href="https://github.com/myrojoylee/calculator"
+                  href="https://github.com/myrojoylee/Social-Proof-Section"
                 >
-                  <img
-                    src="./assets/images/calculator_demo_img.jpg"
-                    alt="calculator repo"
-                  />
+                  <img src="./assets/images/social-proof.png" alt="" />
 
                   <div class="work__detail-bottom-label-left">
-                    <h3 class="label-title">Project 2</h3>
+                    <h3 class="label-title">Social Card</h3>
                     <p class="label-tech-stack">HTML, CSS, JS</p>
                   </div>
                 </a>
@@ -117,28 +120,26 @@
               <div class="bottom-image-right">
                 <a
                   class="image-links"
-                  href="https://github.com/myrojoylee/calculator"
+                  href="https://github.com/myrojoylee/NFT-card-FrontEndMentor-Project"
                 >
-                  <img
-                    src="./assets/images/calculator_demo_img.jpg"
-                    alt="calculator repo"
-                  />
+                  <img src="./assets/images/nft-card.png" alt="" />
 
                   <div class="work__detail-bottom-label-right">
-                    <h3 class="label-title">Project 3</h3>
+                    <h3 class="label-title">NFT Card</h3>
                     <p class="label-tech-stack">HTML, CSS, JS</p>
                   </div>
                 </a>
               </div>
             </div>
           </div>
-        </div>
+        </article>
       </section>
     </main>
 
-    <!--------------- FOOTER/CONATCT SECTION ---------------->
+    <!------------------------ FOOTER/CONTACT INFO ----------------------->
+    <!-------------------------------------------------------------------->
     <footer id="contact-me" class="social-media">
-      <h2 class="social-media__header">Contact Me</h2>
+      <h4 class="social-media__header">Contact Me</h4>
       <nav class="social-media__detail">
         <ul>
           <li class="social-media__detail-text phone">(267)450-7012</li>
