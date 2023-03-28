@@ -6,13 +6,9 @@ The purpose of the assignment was to create the first draft of a working portfol
 
 ## Usage
 
-DESKTOP VIEW:
+DESKTOP to MOBILE view:
 
-<img src="https://github.com/myrojoylee/professional-portfolio-mj-lee/blob/main/assets/images/portfolio.gif" width = "500" />
-
-MOBILE VIEW:
-
-<img src="https://github.com/myrojoylee/professional-portfolio-mj-lee/blob/main/assets/images/portfolio_mobile.gif" width = "250" />
+<img src="https://github.com/myrojoylee/professional-portfolio-mj-lee/blob/main/assets/images/portfolio_desktop_to_mobile.gif" width = "500" />
 
 [Click here for repo](https://github.com/myrojoylee/professional-portfolio-mj-lee)
 
