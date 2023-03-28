@@ -186,11 +186,7 @@ h1 {
   gap: 2em;
 }
 
-.about-me {
-  display: flex;
-  width: 100%;
-}
-
+.about-me,
 .work {
   display: flex;
   width: 100%;
