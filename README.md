@@ -8,7 +8,7 @@ The purpose of the assignment was to create the first draft of a working portfol
 
 DESKTOP to MOBILE view:
 
-<img src="https://github.com/myrojoylee/professional-portfolio-mj-lee/blob/main/assets/images/portfolio_desktop_to_mobile_final.gif" width = "700" />
+<img src="https://github.com/myrojoylee/professional-portfolio-mj-lee/blob/main/assets/images/portfolio_desktop_mobile_final.gif" width = "700" />
 
 [Click here for repo](https://github.com/myrojoylee/professional-portfolio-mj-lee)
 
